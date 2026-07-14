@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "mahadev24x7.live"
+        }
+      ],
+      "destination": "https://www.mahadev24x7.live/:path*",
+      "permanent": true
+    }
+  ]
+}

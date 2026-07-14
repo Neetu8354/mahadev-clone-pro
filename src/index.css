@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Mahadev Book — Obsidian + Imperial Gold + Emerald (premium 2026 refresh) */
+    --background: 160 20% 4%;
+    --foreground: 45 60% 95%;
+
+    --card: 160 18% 7%;
+    --card-foreground: 45 60% 95%;
+
+    --popover: 160 18% 7%;
+    --popover-foreground: 45 60% 95%;
+
+    --primary: 44 85% 58%;
+    --primary-foreground: 160 25% 6%;
+
+    --secondary: 160 15% 11%;
+    --secondary-foreground: 45 60% 95%;
+
+    --muted: 160 12% 12%;
+    --muted-foreground: 45 12% 70%;
+
+    --accent: 158 64% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 44 35% 22%;
+    --input: 160 15% 14%;
+    --ring: 44 85% 58%;
+
+    --radius: 1rem;
+
+    --gold: 44 85% 58%;
+    --gold-light: 48 96% 74%;
+    --gold-dark: 38 75% 38%;
+    --emerald: 158 64% 42%;
+    --emerald-deep: 162 70% 18%;
+    --whatsapp: 142 70% 45%;
+
+    --gradient-gold: linear-gradient(135deg, hsl(48 96% 74%), hsl(44 85% 58%) 45%, hsl(38 80% 42%));
+    --gradient-gold-soft: linear-gradient(135deg, hsl(44 85% 58% / 0.18), hsl(38 75% 38% / 0.04));
+    --gradient-dark: linear-gradient(180deg, hsl(160 20% 4%), hsl(162 22% 6%));
+    --gradient-emerald: linear-gradient(135deg, hsl(162 70% 18%), hsl(158 64% 28%));
+    --gradient-hero: radial-gradient(ellipse at 30% 40%, hsl(158 64% 22% / 0.45), transparent 55%), radial-gradient(ellipse at 80% 70%, hsl(44 85% 50% / 0.18), transparent 60%);
+    --gradient-radial-gold: radial-gradient(circle at center, hsl(44 85% 58% / 0.28), transparent 70%);
+
+    --shadow-gold: 0 12px 40px -10px hsl(44 85% 58% / 0.45);
+    --shadow-gold-lg: 0 28px 70px -15px hsl(44 85% 58% / 0.55);
+    --shadow-emerald: 0 12px 40px -10px hsl(158 64% 38% / 0.4);
+    --shadow-card: 0 10px 36px -10px hsl(0 0% 0% / 0.7);
+
+    --transition-smooth: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .dark {
+    --background: 160 20% 4%;
+    --foreground: 45 60% 95%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image:
+      radial-gradient(ellipse at top, hsl(45 88% 55% / 0.08), transparent 60%),
+      radial-gradient(ellipse at bottom, hsl(38 75% 38% / 0.06), transparent 60%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .border-gold {
+    border-image: var(--gradient-gold) 1;
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(hsl(45 88% 55% / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(45 88% 55% / 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .glow-gold {
+    box-shadow: var(--shadow-gold);
+  }
+}
+
+@layer utilities {
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  .animate-shimmer {
+    background: linear-gradient(90deg, transparent, hsl(45 88% 55% / 0.4), transparent);
+    background-size: 200% 100%;
+    animation: shimmer 2.5s linear infinite;
+  }
+
+  @keyframes pulse-gold {
+    0%, 100% { box-shadow: 0 0 0 0 hsl(142 70% 45% / 0.6); }
+    50% { box-shadow: 0 0 0 14px hsl(142 70% 45% / 0); }
+  }
+  .animate-pulse-whatsapp { animation: pulse-gold 2s infinite; }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  .animate-float { animation: float 4s ease-in-out infinite; }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee { animation: marquee 30s linear infinite; }
+}

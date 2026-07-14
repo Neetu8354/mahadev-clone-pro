@@ -1,0 +1,29 @@
+# Mahadev Book
+
+> India's trusted online cricket betting & live casino ID provider with instant UPI withdrawals (5–15 minutes), 24x7 Hindi support, and ₹100 minimum deposit. IPL 2026 ready.
+
+Mahadev Book gives verified Indian players instant cricket and casino IDs via WhatsApp. Deposits and withdrawals run through UPI (PhonePe, Google Pay, Paytm) in INR with zero processing fees. Games include cricket betting (IPL, T20, ODI, Test), Teen Patti, Andar Bahar, Roulette, Dragon Tiger, Blackjack and 1000+ slots.
+
+## Pages
+
+- [Home](/): Instant UPI withdrawal betting ID — overview, features, how it works, FAQ.
+- [Create Cricket ID](/create-cricket-id): Step-by-step guide to creating a verified cricket ID online in 2 minutes.
+- [About](/about): Company background, trust signals, support details.
+- [Contact](/contact): 24x7 WhatsApp support in Hindi and English.
+- [Blog](/blog): Expert betting and casino guides for Indian players.
+
+## Games
+
+- [Cricket Betting](/games/cricket): IPL 2026, T20, ODI, Test cricket markets.
+- [Teen Patti](/games/teen-patti): Live dealer Teen Patti in Hindi.
+- [Andar Bahar](/games/andar-bahar): Real money Andar Bahar with INR wallet.
+- [Roulette](/games/roulette): European and live dealer roulette.
+- [Dragon Tiger](/games/dragon-tiger): Fast-paced live card game.
+
+## Featured Guides
+
+- [How to get a cricket betting ID in India 2026](/blog/how-to-get-online-cricket-betting-id-india-2026)
+- [IPL 2026 betting tips & strategy](/blog/ipl-2026-betting-tips-strategy)
+- [Best UPI deposit & withdrawal for betting](/blog/best-upi-deposit-withdrawal-betting-india)
+- [Teen Patti online real money guide](/blog/teen-patti-online-real-money-guide-india)
+- [Mahadev Book vs other ID providers](/blog/mahadev-book-vs-other-betting-id-providers)
