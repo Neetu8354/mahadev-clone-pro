@@ -7,12 +7,13 @@
 const CANONICAL_HOST = "mahadev24x7.live";
 const CANONICAL_ORIGIN = `https://${CANONICAL_HOST}`;
 
-// Hosts that should NOT be redirected (local dev + Lovable preview/staging).
+// Hosts that should NOT be redirected (local dev + Lovable preview/staging + www canonical).
 const ALLOWED_HOST_PATTERNS = [
   /^localhost$/i,
   /^127\.0\.0\.1$/,
   /\.lovable\.app$/i,
   /\.lovableproject\.com$/i,
+  new RegExp(`^www\\.${CANONICAL_HOST.replace(".", "\\.")}$`, "i"),
 ];
 
 // Legacy hosts that should be force-redirected to the canonical domain.
@@ -23,7 +24,6 @@ const LEGACY_HOSTS = [
   "www.mahadevbookbets.live",
   "mahadev24.live",
   "www.mahadev24.live",
-  `www.${CANONICAL_HOST}`,
 ];
 
 export function enforceCanonicalHost() {
