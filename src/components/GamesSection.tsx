@@ -5,26 +5,25 @@ import andarbahar from "@/assets/game-andarbahar.jpg";
 import blackjack from "@/assets/game-blackjack.jpg";
 import slots from "@/assets/game-slots.jpg";
 import dragontiger from "@/assets/game-dragontiger.jpg";
-import { WHATSAPP_LINK } from "@/lib/links";
 
 const CRICKET_GAMES = [
-  { img: cricket, title: "IPL Betting", desc: "Bet on every IPL match, ball-by-ball live odds.", alt: "Bet on IPL 2026 live online with Mahadev Book India" },
-  { img: cricket, title: "T20 World Cup", desc: "ICC T20 & 50-over World Cup live markets.", alt: "T20 World Cup online betting on Mahadev Book India" },
-  { img: cricket, title: "Test & ODI", desc: "Test matches, ODIs, BBL, PSL — every league.", alt: "Test, ODI and BBL cricket betting online on Mahadev Book" },
-  { img: cricket, title: "Fancy Cricket", desc: "Session, lambi, over runs & toss markets.", alt: "Fancy cricket betting session and lambi on Mahadev Book India" },
+  { img: cricket, title: "IPL Betting", desc: "Bet on every IPL match, ball-by-ball live odds.", alt: "Bet on IPL 2026 live online with Mahadev Book India", href: "/ipl-2026-betting" },
+  { img: cricket, title: "T20 World Cup", desc: "ICC T20 & 50-over World Cup live markets.", alt: "T20 World Cup online betting on Mahadev Book India", href: "/games/cricket" },
+  { img: cricket, title: "Test & ODI", desc: "Test matches, ODIs, BBL, PSL — every league.", alt: "Test, ODI and BBL cricket betting online on Mahadev Book", href: "/games/cricket" },
+  { img: cricket, title: "Fancy Cricket", desc: "Session, lambi, over runs & toss markets.", alt: "Fancy cricket betting session and lambi on Mahadev Book India", href: "/games/cricket" },
 ];
 
 const CASINO_GAMES = [
-  { img: teenpatti, title: "Teen Patti", desc: "India's favourite — 3-card live action.", alt: "Play Teen Patti online real money India on Mahadev Book" },
-  { img: andarbahar, title: "Andar Bahar", desc: "Classic Indian card game with live dealers.", alt: "Live Andar Bahar online India with Mahadev Book casino" },
-  { img: roulette, title: "Roulette", desc: "European & Lightning roulette tables.", alt: "Play online Roulette India real money on Mahadev Book" },
-  { img: blackjack, title: "Live Blackjack", desc: "Real dealers, real-time rounds, real ₹ wins.", alt: "Live Blackjack online India INR — Mahadev Book casino" },
-  { img: dragontiger, title: "Dragon Tiger", desc: "Fast-paced card battle, instant results.", alt: "Dragon Tiger live casino India on Mahadev Book" },
-  { img: slots, title: "777 Slots", desc: "200+ premium slots with mega jackpots.", alt: "Online 777 slots real money India — Mahadev Book casino" },
+  { img: teenpatti, title: "Teen Patti", desc: "India's favourite — 3-card live action.", alt: "Play Teen Patti online real money India on Mahadev Book", href: "/games/teen-patti" },
+  { img: andarbahar, title: "Andar Bahar", desc: "Classic Indian card game with live dealers.", alt: "Live Andar Bahar online India with Mahadev Book casino", href: "/games/andar-bahar" },
+  { img: roulette, title: "Roulette", desc: "European & Lightning roulette tables.", alt: "Play online Roulette India real money on Mahadev Book", href: "/games/roulette" },
+  { img: blackjack, title: "Live Blackjack", desc: "Real dealers, real-time rounds, real ₹ wins.", alt: "Live Blackjack online India INR — Mahadev Book casino", href: "/games/cricket" },
+  { img: dragontiger, title: "Dragon Tiger", desc: "Fast-paced card battle, instant results.", alt: "Dragon Tiger live casino India on Mahadev Book", href: "/games/dragon-tiger" },
+  { img: slots, title: "777 Slots", desc: "200+ premium slots with mega jackpots.", alt: "Online 777 slots real money India — Mahadev Book casino", href: "/create-cricket-id" },
 ];
 
-const Card = ({ img, title, desc, alt }: { img: string; title: string; desc: string; alt: string }) => (
-  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
+const Card = ({ img, title, desc, alt, href }: { img: string; title: string; desc: string; alt: string; href: string }) => (
+  <a href={href}
     className="group relative rounded-2xl overflow-hidden border border-gold/20 bg-card hover:border-gold/60 transition-all hover:-translate-y-1 shadow-card hover:shadow-gold">
     <div className="aspect-square overflow-hidden">
       <img src={img} alt={alt} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" width={800} height={800} />
