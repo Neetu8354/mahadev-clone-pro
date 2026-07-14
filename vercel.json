@@ -11,5 +11,11 @@
       "destination": "https://www.mahadev24x7.live/:path*",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/((?!api/.*).*)",
+      "destination": "/index.html"
+    }
   ]
 }
