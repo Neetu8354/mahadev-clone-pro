@@ -1,4 +1,4 @@
-import logo from "@/assets/logo.png";
+import { Logo } from "@/components/Logo";
 import { WHATSAPP_LINK } from "@/lib/links";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -20,13 +20,7 @@ export const Header = () => {
       <div className="container flex items-center justify-between py-2.5 sm:py-3 gap-2 sm:gap-4">
         {/* Logo */}
         <a href="#home" className="flex items-center shrink-0">
-          <img
-            src={logo}
-            alt="Mahadev Book — India's #1 online cricket betting ID provider"
-            className="h-9 sm:h-11 md:h-12 lg:h-14 w-auto"
-            width={224}
-            height={56}
-          />
+          <Logo height={48} />
         </a>
 
         {/* Desktop nav */}
