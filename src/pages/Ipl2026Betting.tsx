@@ -20,14 +20,19 @@ const FAQS = [
   { q: "Do you offer an IPL welcome bonus?", a: "Yes — 100% bonus on your first deposit, credited instantly. Special IPL reload bonuses run all season." },
 ];
 
-const CTA = ({ children, variant = "primary" }: { children: React.ReactNode; variant?: "primary" | "secondary" }) => (
-  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-    className={variant === "primary"
-      ? "inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-gradient-gold text-primary-foreground font-bold text-base shadow-gold hover:scale-105 transition-transform"
-      : "inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border-2 border-gold/40 text-gold font-bold hover:bg-gold/10 transition-all"}>
-    {children}
-  </a>
-);
+const CTA = ({ children, variant = "primary", href }: { children: React.ReactNode; variant?: "primary" | "secondary"; href?: string }) => {
+  const cls = variant === "primary"
+    ? "inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-gradient-gold text-primary-foreground font-bold text-base shadow-gold hover:scale-105 transition-transform"
+    : "inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border-2 border-gold/40 text-gold font-bold hover:bg-gold/10 transition-all";
+  if (variant === "secondary" && href) {
+    return <a href={href} className={cls}>{children}</a>;
+  }
+  return (
+    <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className={cls}>
+      {children}
+    </a>
+  );
+};
 
 const Ipl2026Betting = () => {
   const jsonLd = [
@@ -62,7 +67,7 @@ const Ipl2026Betting = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <CTA>Get My IPL 2026 ID →</CTA>
-              <CTA variant="secondary">See Live Odds Sample</CTA>
+              <CTA variant="secondary" href="/blog/ipl-2026-betting-tips-strategy">IPL 2026 Betting Guide →</CTA>
             </div>
             <div className="grid grid-cols-3 gap-4 mt-12 max-w-2xl mx-auto">
               {[{ k: "74", v: "Matches" }, { k: "100+", v: "In-Play Markets" }, { k: "5 min", v: "UPI Payout" }].map(s => (

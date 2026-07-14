@@ -80,9 +80,9 @@ const GamePage = () => {
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-gold text-primary-foreground font-bold shadow-gold hover:scale-105 transition-all">
               <Trophy className="w-5 h-5" /> Get {game.shortName} ID
             </a>
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
+            <a href="/contact"
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border-2 border-gold/40 text-foreground font-semibold hover:bg-gold/10">
-              <MessageCircle className="w-5 h-5 text-whatsapp" /> Chat on WhatsApp
+              Contact Support →
             </a>
           </div>
         </header>
@@ -125,11 +125,11 @@ const GamePage = () => {
         </section>
 
         <aside className="mt-12 p-8 rounded-2xl bg-gradient-gold-soft border border-gold/30 text-center">
-          <h3 className="text-2xl font-display font-bold text-gradient-gold mb-3">Play {game.shortName} on Mahadev Book — 24x7</h3>
-          <p className="text-muted-foreground mb-5">Instant ID via WhatsApp • UPI deposit ₹100 min • Fast INR withdrawal</p>
-          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
+          <h3 className="text-2xl font-display font-bold text-gradient-gold mb-3">Play {game.shortName} on Mahadev24x7 — 24x7</h3>
+          <p className="text-muted-foreground mb-5">UPI deposit ₹100 min • Fast INR withdrawal • 24×7 Hindi support</p>
+          <a href="/create-cricket-id"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-gradient-gold text-primary-foreground font-bold shadow-gold hover:shadow-gold-lg hover:scale-105 transition-all">
-            <MessageCircle className="w-5 h-5" /> Get Started on WhatsApp
+            <Trophy className="w-5 h-5" /> Get Your ID Now
           </a>
         </aside>
 

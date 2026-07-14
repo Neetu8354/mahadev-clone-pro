@@ -64,15 +64,15 @@ const Contact = () => {
         </header>
 
         <section className="grid md:grid-cols-2 gap-6 mb-10">
-          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-            className="rounded-2xl border-2 border-gold/40 p-7 bg-card hover:border-gold hover:shadow-gold transition-all group">
+          <div className="rounded-2xl border-2 border-gold/40 p-7 bg-card">
             <MessageCircle className="w-10 h-10 text-gold mb-4" />
             <h2 className="text-2xl font-display font-bold text-gradient-gold mb-2">WhatsApp Support</h2>
-            <p className="text-sm text-muted-foreground mb-4">Get your ID, deposit, withdraw, or ask anything — instant reply.</p>
-            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-gold text-primary-foreground font-bold text-sm shadow-gold group-hover:scale-105 transition-transform">
+            <p className="text-sm text-muted-foreground mb-4">Get your ID, deposit, withdraw, or ask anything — instant reply in Hindi & English.</p>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-gold text-primary-foreground font-bold text-sm shadow-gold hover:scale-105 transition-transform">
               Open WhatsApp →
-            </span>
-          </a>
+            </a>
+          </div>
 
           <div className="rounded-2xl border border-gold/20 p-7 bg-card space-y-4">
             <h2 className="text-2xl font-display font-bold text-gold">Support Hours</h2>

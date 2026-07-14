@@ -20,14 +20,19 @@ const FAQS = [
   { q: "Can I play Teen Patti with friends?", a: "Yes — private tables let you invite friends. Set your own boot, table size and rules." },
 ];
 
-const CTA = ({ children, variant = "primary" }: { children: React.ReactNode; variant?: "primary" | "secondary" }) => (
-  <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-    className={variant === "primary"
-      ? "inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-gradient-gold text-primary-foreground font-bold text-base shadow-gold hover:scale-105 transition-transform"
-      : "inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border-2 border-gold/40 text-gold font-bold hover:bg-gold/10 transition-all"}>
-    {children}
-  </a>
-);
+const CTA = ({ children, variant = "primary", href }: { children: React.ReactNode; variant?: "primary" | "secondary"; href?: string }) => {
+  const cls = variant === "primary"
+    ? "inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-gradient-gold text-primary-foreground font-bold text-base shadow-gold hover:scale-105 transition-transform"
+    : "inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full border-2 border-gold/40 text-gold font-bold hover:bg-gold/10 transition-all";
+  if (variant === "secondary" && href) {
+    return <a href={href} className={cls}>{children}</a>;
+  }
+  return (
+    <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className={cls}>
+      {children}
+    </a>
+  );
+};
 
 const TeenPattiRealMoney = () => {
   const jsonLd = [
@@ -62,7 +67,7 @@ const TeenPattiRealMoney = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <CTA>Join a Live Table →</CTA>
-              <CTA variant="secondary">Claim 100% Bonus</CTA>
+              <CTA variant="secondary" href="/blog/teen-patti-online-real-money-guide-india">Teen Patti Guide →</CTA>
             </div>
             <div className="grid grid-cols-3 gap-4 mt-12 max-w-2xl mx-auto">
               {[{ k: "₹10", v: "Min Boot" }, { k: "7+", v: "Variants" }, { k: "24×7", v: "Hindi Dealers" }].map(s => (
