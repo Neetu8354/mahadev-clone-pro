@@ -26,5 +26,5 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://mahadev24x7.live/sitemap.xml
-Host: https://mahadev24x7.live
+Sitemap: https://www.mahadev24x7.live/sitemap.xml
+Host: https://www.mahadev24x7.live
