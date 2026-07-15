@@ -16,6 +16,7 @@ const CreateCricketId = lazy(() => import("./pages/CreateCricketId.tsx"));
 const Ipl2026Betting = lazy(() => import("./pages/Ipl2026Betting.tsx"));
 const TeenPattiRealMoney = lazy(() => import("./pages/TeenPattiRealMoney.tsx"));
 const AviatorTricks = lazy(() => import("./pages/AviatorTricks.tsx"));
+const OnlineCricket = lazy(() => import("./pages/OnlineCricket.tsx"));
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => (
             <Route path="/ipl-2026-betting" element={<Ipl2026Betting />} />
             <Route path="/teen-patti-real-money" element={<TeenPattiRealMoney />} />
             <Route path="/aviator-tricks" element={<AviatorTricks />} />
+            <Route path="/online-cricket" element={<OnlineCricket />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
