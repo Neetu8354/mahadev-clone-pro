@@ -14,18 +14,18 @@ interface SEOProps {
   noindex?: boolean;
 }
 
-const SITE_URL = "https://mahadev24x7.live";
+const SITE_URL = "https://www.mahadevbook14.live";
 
 export const SEO = ({
   title,
   description,
   canonical,
   keywords,
-  ogImage = "https://mahadev24x7.live/og-image.jpg",
+  ogImage = "https://www.mahadevbook14.live/og-image.jpg",
   ogType = "website",
   publishedTime,
   modifiedTime,
-  author = "Mahadev24x7",
+  author = "MahadevBook14",
   jsonLd,
   noindex,
 }: SEOProps) => {
@@ -51,7 +51,7 @@ export const SEO = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={fullImage} />
-      <meta property="og:site_name" content="Mahadev24x7" />
+      <meta property="og:site_name" content="MahadevBook14" />
       <meta property="og:locale" content="en_IN" />
 
       <meta name="twitter:card" content="summary_large_image" />
