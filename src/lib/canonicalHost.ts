@@ -4,7 +4,7 @@
 // level of legacy domains (e.g., Cloudflare page rule). This client-side
 // guard only handles cases where an old domain *resolves* to this app.
 
-const CANONICAL_HOST = "www.mahadevbook14.live";
+const CANONICAL_HOST = "mahadev24x7.live";
 const CANONICAL_ORIGIN = `https://${CANONICAL_HOST}`;
 
 // Hosts that should NOT be redirected (local dev + Lovable preview/staging + www canonical).
@@ -13,7 +13,7 @@ const ALLOWED_HOST_PATTERNS = [
   /^127\.0\.0\.1$/,
   /\.lovable\.app$/i,
   /\.lovableproject\.com$/i,
-  new RegExp(`^${CANONICAL_HOST.replace(".", "\\.")}$`, "i"),
+  new RegExp(`^www\\.${CANONICAL_HOST.replace(".", "\\.")}$`, "i"),
 ];
 
 // Legacy hosts that should be force-redirected to the canonical domain.
@@ -24,8 +24,8 @@ const LEGACY_HOSTS = [
   "www.mahadevbookbets.live",
   "mahadev24.live",
   "www.mahadev24.live",
-  "mahadev24x7.live",
-  "www.mahadev24x7.live",
+  "mahadevbook14.live",
+  "www.mahadevbook14.live",
 ];
 
 export function enforceCanonicalHost() {
